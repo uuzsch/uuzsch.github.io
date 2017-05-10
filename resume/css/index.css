@@ -1,0 +1,258 @@
+/*公共部分*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/*第一屏*/
+.first{
+    background-color: #00b050;
+    position: relative;
+}
+.canvas1,.canvas2{
+    left: 50%;
+    margin-left: -250px; ;
+    margin-top:-100px;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    font: 700 100px/200px 微软雅黑;
+    color: white;
+    position: absolute;
+}
+.canvas1{
+    animation: bigger 1s infinite;
+}
+.canvas1{
+    animation: bigger 1s infinite 0.5s;
+}
+
+/*第二屏幕*/
+.second{
+    background-color: #00c1f7;
+    position: relative;
+
+    }
+.second-top{
+    height: 104px;
+    width: 1100px;
+    top: 150px;
+    left: 50%;
+    margin-left:-550px;
+    position: absolute;
+}
+.second-top img{
+    width: 100px;
+    height: 100px;
+    top: 0;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+}
+.second-top span{
+    display: block;
+    top: 102px;
+    width: 1100px;
+    left: 50%;
+    margin-left:-550px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+}
+.second-bottom{
+    width: 1100px;
+    height: 300px;
+    top: 254px;
+    left: 50%;
+    margin-left:-550px;
+    position: absolute;
+}
+.second-bottom span{
+    height: 50px;
+    margin: 0px 100px;
+    display: block;
+    font:  20px/50px 微软雅黑;
+    color: #00c1f7;
+}
+/*字体动画*/
+.second.current .second-lb span:nth-child(1){
+    animation: changeWord 1s 0s forwards;
+}
+.second.current .second-lb span:nth-child(2) {
+    animation: changeWord 1s  0.5s forwards;
+}
+.second.current .second-lb span:nth-child(3) {
+    animation: changeWord 1s  1s forwards;
+}
+.second.current .second-lb span:nth-child(4) {
+    animation: changeWord 1s  1.5s forwards;
+}
+.second.current .second-lb span:nth-child(5) {
+    animation: changeWord 1s  2s forwards;
+}
+.second.current .second-lb span:nth-child(6) {
+    animation: changeWord 1s  2.5s forwards;
+}
+.second.current .second-rb span:nth-child(1){
+    animation: changeWord 1s  0s forwards;
+}
+.second.current .second-rb span:nth-child(2) {
+    animation: changeWord 1s  0.5s forwards;
+}
+.second.current .second-rb span:nth-child(3) {
+    animation: changeWord 1s  1s forwards;
+}
+.second.current .second-rb span:nth-child(4) {
+    animation: changeWord 1s  1.5s forwards;
+}
+.second.current .second-rb span:nth-child(5) {
+    animation: changeWord 1s  2s forwards;
+}
+.second.current .second-rb span:nth-child(6) {
+    animation: changeWord 1s  2.5s forwards;
+}
+
+/*第三屏*/
+.third{
+    background-color: #005eff;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+.internship{
+    left: 20px;
+    display: block;
+    height: 30px;
+    font: 700 30px/30px 微软雅黑;
+    color: white;
+    position: absolute;
+}
+.third-left,.third-right{
+    top: 100px;
+    width: 600px;
+    height: 280px;
+    text-align: center;
+    font: 700 30px 微软雅黑;
+    color: white;
+    position: absolute;
+}
+.third-left{
+    left: -600px;
+}
+.third-right{
+    right: -600px;
+}
+.third-right p{
+    font: 500 30px 宋体;
+}
+.third-left p{
+    font: 500 30px 宋体;
+}
+.third-line{
+    top: 55px;
+    width: 1200px;
+    height:2px !important;
+    display: block;
+    background-color: white;
+    position: absolute;
+}
+.third-bottom{
+    top: 780px;
+    color: white;
+    font: 500 30px/30px 宋体;
+    position: absolute;
+}
+.third-bottom span{
+    display: block;
+    height: 30px;
+    margin-top: 1px;
+}
+.third-bottom span:nth-child(1){
+    color: white;
+    font: 700 30px/30px 微软雅黑;
+}
+.third-line2{
+    top:35px;
+}
+.third.current .third-bottom{
+    animation: bt 1s  0s forwards;
+}
+.third.current .third-left{
+    animation: lr 1s  0s forwards;
+}
+.third.current .third-right{
+    animation: rl  1s 0s forwards;
+}
+/*第四屏*/
+.fourth{
+    background-color: #ff724f;
+    position: relative;
+}
+.fourth>div{
+    text-align: center;
+    width: 600px;
+    height: 100px;
+    font: 500 60px/100px 微软雅黑;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -300px;
+}
+/*动画部分*/
+/*动画 变大*/
+@keyframes bigger {
+    0%{
+        transform:scale(1);
+        opacity: 1;
+    }
+
+    100%{
+        transform:scale(1.5);
+        opacity: 0.1;
+    }
+}
+/*动画：字体渐出*/
+@keyframes changeWord {
+     0%{
+         color: #00c1f7;
+     }
+
+     100%{
+         color: white;
+     }
+ }
+/*下往上*/
+@keyframes bt{
+    0%{
+        top:780px;
+    }
+
+    100%{
+        top: 380px;
+    }
+}
+@keyframes lr{
+    0%{
+        left: -600px;
+    }
+
+    100%{
+        left: 20px;
+    }
+}
+@keyframes rl{
+    0%{
+        right:-680px;
+    }
+
+    100%{
+        right: 20px;
+    }
+}
